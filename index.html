@@ -1,195 +1,307 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="-yU_zR8G5iF_Rv9nSDNANC98VVRgratpf9heOtfgguo" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CalmAura Beauty Spa">
-    <meta name="keywords" content="CalmAura Beauty Spa, Beauty spa near me, Massage near me, Thai Massage, Swedish massage, facial treatment, manicure & pedicure, waxing, spa in Edenvale">
-    <title>CalmAura Beauty Spa</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white; /* white background */
-            color: grey;
-        }
-        header {
-            background-color: #6a1b9a; /* Purple background */
-            color: #FFD700; /* Golden yellow text */
-            text-align: center;
-            padding: 50px 20px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 3.5em;
-        }
-        header img.logo {
-            width: 80px; /* Adjust logo size */
-            margin-top: 20px;
-        }
-        nav {
-            background-color: #fff;
-            display: flex;
-            justify-content: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #6a1b9a; /* Purple text */
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #FFD700; /* Golden yellow on hover */
-        }
-        .slider {
-            width: 100%;
-            height: 60vh;
-            overflow: hidden;
-        }
-        .slider img {
-            width: 100%;
-            height: 60vh;
-            object-fit: cover;
-        }
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            justify-items: center;
-        }
-        .service {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            text-align: center;
-            padding: 15px;
-        }
-        .service:hover {
-            transform: translateY(-10px);
-        }
-        .service img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        .service h3 {
-            color: #6a1b9a; /* Purple color for headings */
-            padding: 10px 0;
-        }
-        .service p {
-            font-size: 1em;
-            color: #555;
-        }
-        footer {
-            background-color: #6a1b9a; /* Purple footer */
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        #cab{
-            color: purple;
-            margin-left: 100px;
-        }
-        #cab:hover{
-            cursor: pointer;
-            opacity: 0.6;
-            transition: 0.17s;
-        }
-        h2{
-            color: purple;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MEXTEN – The Nissan Specialist | Harare CBD</title>
+  <meta name="description" content="MEXTEN is the Nissan Specialist in Harare CBD, Zimbabwe. We supply engine, suspension, fuel system, braking and body parts nationwide." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --blue: #0b4db8;
+      --blue-dark: #083a8c;
+      --gold: #d4af37;
+      --light: #f4f7fb;
+      --dark: #0f172a;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      background: rgba(11,77,184,0.95);
+      z-index: 1000;
+    }
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+    .nav h1 { font-size: 1.6rem; font-weight: 700; }
+    .nav ul { display: flex; gap: 25px; list-style: none; }
+    .nav ul li a { color: #fff; font-weight: 500; }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(11,77,184,0.75);
+      z-index: -1;
+    }
+    .hero-content {
+      max-width: 900px;
+      padding: 20px;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #000;
+      padding: 14px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-title h2 {
+      font-size: 2.4rem;
+      color: var(--blue);
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* SERVICES */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+    .service-box {
+      background: var(--light);
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform .3s;
+    }
+    .service-box:hover { transform: translateY(-6px); }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      border-radius: 14px;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    .socials a {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: 500;
+    }
+
+    footer {
+      background: #061f4a;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media(max-width: 900px) {
+      .about, .contact-grid { grid-template-columns: 1fr; }
+      .hero h2 { font-size: 2.2rem; }
+    }
+  
+    /* MOBILE ENHANCEMENTS */
+    @media(max-width: 600px) {
+      .nav ul { display: none; }
+      .hero h2 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+      section { padding: 70px 16px; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <img src="images/e1.jpg" alt="CalmAura Beauty Spa Logo" class="logo"> <!-- Placeholder for your logo -->
-        <h1>CalmAura Beauty Spa</h1>
-        <p>Your Sanctuary for Relaxation and Rejuvenation</p>
-    </header>
-    <br>
-    <a id="cab" href="afrikaans.html">Afrikaans</a><br>
-    <nav>
-        <a href="details.html">Read More</a>
-        <a href="pools.html">Prices</a>
-        <a href="#services">Services</a>
-        <a href="contacts.html">Contact</a>
-    </nav>
-    <div class="slider">
-        <img src="images/muss.jpg" alt="Swedish Massage">
-        <img src="images/miss.jpeg" alt="Thai Massage">
-        <img src="images/mass.jpeg" alt="Hot Stone Massage">
-        <img src="images/facial.jpg" alt="Facial Scrub">
-        <img src="images/wax.jpg" alt="Waxing">
-        <img src="images/foot.jpg" alt="Manicure & Pedicure">
+
+<header>
+  <div class="nav">
+    <select id="languageSwitcher" style="padding:6px;border-radius:6px;border:none;">
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+      <option value="zh">中文</option>
+      <option value="es">ES</option>
+      <option value="af">AF</option>
+    </select>
+    <h1>MEXTEN</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <video autoplay muted loop playsinline>
+    <source src="https://cdn.coverr.co/videos/coverr-car-engine-running-9289/1080p.mp4" type="video/mp4">
+  </video>
+  <div class="hero-content">
+    <h2>The Nissan Specialist in Zimbabwe</h2>
+    <p>Engine, Suspension, Fuel, Cooling, Braking & Body Parts. Based in Harare CBD – Supplying Nationwide.</p>
+    <a class="btn" href="https://wa.me/263713107111" target="_blank">WhatsApp Us Now</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="section-title"><h2>About MEXTEN</h2></div>
+    <div class="about">
+      <div>
+        <p><strong>MEXTEN</strong> is a trusted Nissan specialist located in Harare CBD, Zimbabwe. We provide high‑quality Nissan engine parts, suspension components, fuel and cooling systems, braking spares and body parts.</p>
+        <p>Our team is committed to delivering reliability, performance and expert servicing, including injector servicing and maintenance. We proudly supply customers nationwide.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738" alt="Nissan engine">
     </div>
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>Located in Edenvale, CalmAura Beauty Spa offers top-tier spa services, including Swedish Massage, Thai Massage, Hot Stone Massage, Facial Scrub, Waxing and Pedicure.</p>
-    </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services">
-            <div class="service">
-                <a href="images/muss.jpg"><img src="images/muss.jpg" alt="Swedish Massage"></a>
-                <h3>Swedish Massage</h3>
-                <p>Relaxing massage technique that improves circulation and reduces stress.</p>
-            </div>
-            <div class="service">
-                <a href="images/miss.jpeg"><img src="images/miss.jpeg" alt="Thai Massage"></a>
-                <h3>Thai Massage</h3>
-                <p>Combines acupressure, yoga-like stretches, and therapeutic techniques.</p>
-            </div>
-            <div class="service">
-               <a href="images/mass.jpeg"> <img src="images/mass.jpeg" alt="Hot Stone Massage"></a>
-                <h3>Hot Stone Massage</h3>
-                <p>Uses heated stones to soothe muscles and relieve tension.</p>
-            </div>
-            <div class="service">
-               <a href="images/wax.jpg"><img src="images/wax.jpg" alt="Waxing"></a>
-                <h3>Waxing</h3>
-                <p>Smooth hair removal treatment for soft and silky skin.</p>
-            </div>
-            <div class="service">
-                <a href="images/gara.jpg"><img src="images/gara.jpg" alt="Braiding"></a>
-                <h3>Massage of Your Choice</h3>
-                <p>Professional massaging services to relax your body and mind.</p>
-            </div>
-            <div class="service">
-               <a href="images/foot.jpg"> <img src="images/foot.jpg" alt="Manicure & Pedicure"></a>
-                <h3>Pedicure</h3>
-                <p>Pamper your feet with luxurious care.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 CalmAura Beauty Spa.& The Fiery Falcon Beauty wellness. All rights reserved. 54A 8th Avenue, Edenvale, Gauteng. / Or 94 Wildebeest Avenue, Rooderkop, Ekurhuleni..Contact: +27 73 770 7739 / 069 417 1354</p>
-    </footer>
-    <script>
-        $(document).ready(function(){
-            $('.slider').slick({
-                autoplay: true,
-                autoplaySpeed: 3000,
-                dots: true,
-                arrows: false,
-            });
-        });
-    </script>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" style="background:#f4f7fb;">
+  <div class="container">
+    <div class="section-title"><h2>Our Services</h2></div>
+    <div class="services">
+      <div class="service-box">Engine & Suspension Parts</div>
+      <div class="service-box">Fuel System & Cooling System</div>
+      <div class="service-box">Braking System Spares</div>
+      <div class="service-box">Nissan Body Parts</div>
+      <div class="service-box">Injector Servicing & Maintenance</div>
+      <div class="service-box">Nationwide Parts Supply</div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-title"><h2>Nissan Parts & Vehicles</h2></div>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" alt="Nissan car">
+      <img src="https://images.unsplash.com/photo-1511910849309-0dffb8785146" alt="Engine bay">
+      <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc" alt="Car brakes">
+      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c8" alt="Suspension parts">
+      <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588" alt="Fuel injectors">
+      <img src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023" alt="Car workshop">
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title"><h2 style="color:#fff;">Contact Us</h2></div>
+    <div class="contact-grid">
+      <div>
+        <p><strong>Head Office:</strong> Harare CBD, Zimbabwe</p>
+        <p><strong>Phone / WhatsApp:</strong> +263 71 310 7111</p>
+        <p><strong>Service Area:</strong> Nationwide Supply</p>
+        <p><a class="btn" href="https://wa.me/263713107111" target="_blank">Chat on WhatsApp</a></p>
+      </div>
+      <div class="socials">
+        <p><strong>Follow Us</strong></p>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 MEXTEN – The Nissan Specialist | Harare CBD</p>
+</footer>
+
+<script>
+const translations = {
+  fr:{heroTitle:"Le spécialiste Nissan au Zimbabwe",heroText:"Pièces moteur, suspension, carburant, refroidissement et freinage. Basé à Harare CBD."},
+  zh:{heroTitle:"津巴布韦日产专家",heroText:"发动机、悬挂、燃油、冷却和制动系统零件。位于哈拉雷CBD。"},
+  es:{heroTitle:"El especialista Nissan en Zimbabue",heroText:"Motor, suspensión, combustible, refrigeración y frenos. Harare CBD."},
+  af:{heroTitle:"Die Nissan-spesialis in Zimbabwe",heroText:"Enjin-, vering-, brandstof-, verkoelings- en remonderdele. Harare CBD."}
+};
+const heroTitle=document.querySelector('.hero h2');
+const heroText=document.querySelector('.hero p');
+document.getElementById('languageSwitcher').addEventListener('change',e=>{
+  const t=translations[e.target.value];
+  if(t){ heroTitle.textContent=t.heroTitle; heroText.textContent=t.heroText; }
+});
+</script>
 </body>
 </html>
+
